@@ -8,7 +8,8 @@ WORKDIR /srv/app
 
 # Install required packages to build npm modules
 RUN apk --no-cache add \
-        git clone https://github.com/formio/formio . 
+        git     
+RUN git clone https://github.com/formio/formio . 
 RUN npm i
 
 EXPOSE 3001
